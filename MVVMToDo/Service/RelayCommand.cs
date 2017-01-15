@@ -32,7 +32,7 @@ namespace MVVMToDo
 
         public void Execute(object parameter)
         {
-            this.execute(parameter);
+            if (parameter != null) this.execute(parameter);
         }
     }
 }

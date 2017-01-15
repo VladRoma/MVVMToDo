@@ -36,35 +36,35 @@ namespace MVVMToDo.ViewModel
             get { return todoItem.Completely; }
             set
             {
-                todoItem.Completely = value;
+                if (todoItem != null) todoItem.Completely = value;
                 OnPropertyChanged("Completely");
             }
         }
 
         public string DateTimeStart
         {
-            get { return todoItem.DateTimeStart; }
+            get { return todoItem != null ? todoItem.DateTimeStart : String.Empty; }
             set
             {
-                todoItem.DateTimeStart = value;
+                if (todoItem != null) todoItem.DateTimeStart = value;
                 OnPropertyChanged("DateTimeStart");
             }
         }
         public string Description
         {
-            get { return todoItem.Description; }
+            get { return todoItem != null ? todoItem.Description : String.Empty; }
             set
             {
-                todoItem.Description = value;
+                if (todoItem != null) todoItem.Description = value;
                 OnPropertyChanged("Description");
             }
         }
         public string DateTimeEnd
         {
-            get { return todoItem.DateTimeEnd; }
+            get { return todoItem != null ? todoItem.DateTimeEnd : String.Empty; }
             set
             {
-                todoItem.DateTimeEnd = value;
+                if (todoItem != null) todoItem.DateTimeEnd = value;
                 OnPropertyChanged("DateTimeEnd");
             }
         }
